@@ -15,22 +15,22 @@ public enum HTTPMethodType: String {
 }
 
 /// Protocol to which every API should confirm to.
-protocol APIProtocol {
+public protocol APIProtocol {
     func httpMthodType() -> HTTPMethodType
     func apiEndPath() -> String
     func apiBasePath() -> String
 }
 
 /// Request Model type that the APIRequestModel confirms to.
-protocol APIModelType {
+public protocol APIModelType {
     var api: APIProtocol { get set }
     var parameters: [String: Any]? { get set }
 }
 
 /// Request Model that holds every api calls parameters, headers and other api details.
 public struct APIRequestModel: APIModelType {
-    var api: APIProtocol
-    var parameters: [String: Any]?
+    public var api: APIProtocol
+    public var parameters: [String: Any]?
 
     init(api: APIProtocol, parameters: [String: Any]? = nil) {
         self.api = api
@@ -39,7 +39,7 @@ public struct APIRequestModel: APIModelType {
 }
 
 /// Responsible for generating common headers for requests.
-struct JNWebserviceConfig {
+public struct JNWebserviceConfig {
     /// Generates common headers specific to APIs. Can also accept additional headers if demanded by specific APIs.
     ///
     /// - Returns: A configured header JSON dictionary which includes both common and additional params.
