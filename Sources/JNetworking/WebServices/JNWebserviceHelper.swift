@@ -16,7 +16,7 @@ enum NetworkError: Error {
 typealias JNWebServiceCompletionBlock = (Result<Data, Error>) -> Void
 
 /// Helper class to prepare request(adding headers & clubbing base URL) & perform API request.
-struct JNWebserviceHelper {
+public struct JNWebserviceHelper {
     
     /// Performs a API request which is called by any service request class.
     /// It also performs an additional task of validating the auth token and refreshing if necessary

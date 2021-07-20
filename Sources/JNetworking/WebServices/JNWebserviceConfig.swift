@@ -28,7 +28,7 @@ protocol APIModelType {
 }
 
 /// Request Model that holds every api calls parameters, headers and other api details.
-struct APIRequestModel: APIModelType {
+public struct APIRequestModel: APIModelType {
     var api: APIProtocol
     var parameters: [String: Any]?
 
