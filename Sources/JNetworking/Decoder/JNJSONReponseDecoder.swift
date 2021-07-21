@@ -9,7 +9,7 @@ import Foundation
 
 public class JNJSONResponseDecoder {
 
-    typealias JNJSONDecodeCompletion<T> = (T?, Error?) -> Void
+    public typealias JNJSONDecodeCompletion<T> = (T?, Error?) -> Void
     
     public static func decodeFrom<T: Codable>(_ responseData: Data, returningModelType: T.Type, completion: JNJSONDecodeCompletion<T>) {
         do {
