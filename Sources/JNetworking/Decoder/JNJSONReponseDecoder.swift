@@ -7,7 +7,7 @@
 
 import Foundation
 
-class JNJSONResponseDecoder {
+public class JNJSONResponseDecoder {
 
     typealias JNJSONDecodeCompletion<T> = (T?, Error?) -> Void
     
