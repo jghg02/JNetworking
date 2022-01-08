@@ -11,9 +11,13 @@ public class JNJSONResponseDecoder {
 
     public typealias JNJSONDecodeCompletion<T> = (T?, Error?) -> Void
     
-    public static func decodeFrom<T: Codable>(_ responseData: Data, returningModelType: T.Type, completion: JNJSONDecodeCompletion<T>) {
+    public static func decodeFrom<T: Codable>(_ responseData: Data, returningModelType: T.Type, completion: JNJSONDecodeCompletion<T>, decodingStrategy: JSONDecoder.KeyDecodingStrategy?) {
         do {
-            let model = try JSONDecoder().decode(returningModelType, from: responseData)
+            let decoder = JSONDecoder()
+            let model = try decoder.decode(returningModelType, from: responseData)
+            if decodingStrategy != nil {
+                decoder.keyDecodingStrategy = decodingStrategy!
+            }
             completion(model, nil)
         } catch let DecodingError.dataCorrupted(context) {
             print("Data corrupted: ", context)
