@@ -1,0 +1,1408 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "JNJSONResponseDecoder",
+      "printedName": "JNJSONResponseDecoder",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "decodeFrom",
+          "printedName": "decodeFrom(_:returningModelType:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Metatype",
+              "printedName": "τ_0_0.Type",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "GenericTypeParam",
+                  "printedName": "τ_0_0"
+                }
+              ]
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(τ_0_0?, Swift.Error?) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Tuple",
+                  "printedName": "(τ_0_0?, Swift.Error?)",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "τ_0_0?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "GenericTypeParam",
+                          "printedName": "τ_0_0"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Optional",
+                      "printedName": "Swift.Error?",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "Error",
+                          "printedName": "Swift.Error",
+                          "usr": "s:s5ErrorP"
+                        }
+                      ],
+                      "usr": "s:Sq"
+                    }
+                  ]
+                }
+              ],
+              "typeAttributes": [
+                "noescape"
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking21JNJSONResponseDecoderC10decodeFrom_18returningModelType10completiony10Foundation4DataV_xmyxSg_s5Error_pSgtXEtSeRzSERzlFZ",
+          "mangledName": "$s11JNetworking21JNJSONResponseDecoderC10decodeFrom_18returningModelType10completiony10Foundation4DataV_xmyxSg_s5Error_pSgtXEtSeRzSERzlFZ",
+          "moduleName": "JNetworking",
+          "genericSig": "<τ_0_0 where τ_0_0 : Swift.Decodable, τ_0_0 : Swift.Encodable>",
+          "sugared_genericSig": "<T where T : Swift.Decodable, T : Swift.Encodable>",
+          "static": true,
+          "declAttributes": [
+            "Final"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "JNJSONResponseDecoder",
+              "printedName": "JNetworking.JNJSONResponseDecoder",
+              "usr": "s:11JNetworking21JNJSONResponseDecoderC"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:11JNetworking21JNJSONResponseDecoderCACycfc",
+          "mangledName": "$s11JNetworking21JNJSONResponseDecoderCACycfc",
+          "moduleName": "JNetworking",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:11JNetworking21JNJSONResponseDecoderC",
+      "mangledName": "$s11JNetworking21JNJSONResponseDecoderC",
+      "moduleName": "JNetworking",
+      "isOpen": true,
+      "hasMissingDesignatedInitializers": true
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "HTTPMethodType",
+      "printedName": "HTTPMethodType",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "get",
+          "printedName": "get",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.HTTPMethodType.Type) -> JNetworking.HTTPMethodType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HTTPMethodType",
+                  "printedName": "JNetworking.HTTPMethodType",
+                  "usr": "s:11JNetworking14HTTPMethodTypeO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.HTTPMethodType.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HTTPMethodType",
+                      "printedName": "JNetworking.HTTPMethodType",
+                      "usr": "s:11JNetworking14HTTPMethodTypeO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking14HTTPMethodTypeO3getyA2CmF",
+          "mangledName": "$s11JNetworking14HTTPMethodTypeO3getyA2CmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 0
+        },
+        {
+          "kind": "Var",
+          "name": "post",
+          "printedName": "post",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.HTTPMethodType.Type) -> JNetworking.HTTPMethodType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HTTPMethodType",
+                  "printedName": "JNetworking.HTTPMethodType",
+                  "usr": "s:11JNetworking14HTTPMethodTypeO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.HTTPMethodType.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HTTPMethodType",
+                      "printedName": "JNetworking.HTTPMethodType",
+                      "usr": "s:11JNetworking14HTTPMethodTypeO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking14HTTPMethodTypeO4postyA2CmF",
+          "mangledName": "$s11JNetworking14HTTPMethodTypeO4postyA2CmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 1
+        },
+        {
+          "kind": "Var",
+          "name": "put",
+          "printedName": "put",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.HTTPMethodType.Type) -> JNetworking.HTTPMethodType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HTTPMethodType",
+                  "printedName": "JNetworking.HTTPMethodType",
+                  "usr": "s:11JNetworking14HTTPMethodTypeO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.HTTPMethodType.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "HTTPMethodType",
+                      "printedName": "JNetworking.HTTPMethodType",
+                      "usr": "s:11JNetworking14HTTPMethodTypeO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking14HTTPMethodTypeO3putyA2CmF",
+          "mangledName": "$s11JNetworking14HTTPMethodTypeO3putyA2CmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 2
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(rawValue:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "JNetworking.HTTPMethodType?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "HTTPMethodType",
+                  "printedName": "JNetworking.HTTPMethodType",
+                  "usr": "s:11JNetworking14HTTPMethodTypeO"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:11JNetworking14HTTPMethodTypeO8rawValueACSgSS_tcfc",
+          "mangledName": "$s11JNetworking14HTTPMethodTypeO8rawValueACSgSS_tcfc",
+          "moduleName": "JNetworking",
+          "implicit": true,
+          "declAttributes": [
+            "Inlinable"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "rawValue",
+          "printedName": "rawValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:11JNetworking14HTTPMethodTypeO8rawValueSSvp",
+          "mangledName": "$s11JNetworking14HTTPMethodTypeO8rawValueSSvp",
+          "moduleName": "JNetworking",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking14HTTPMethodTypeO8rawValueSSvg",
+              "mangledName": "$s11JNetworking14HTTPMethodTypeO8rawValueSSvg",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Inlinable"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:11JNetworking14HTTPMethodTypeO",
+      "mangledName": "$s11JNetworking14HTTPMethodTypeO",
+      "moduleName": "JNetworking",
+      "enumRawTypeName": "String",
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "RawRepresentable",
+          "printedName": "RawRepresentable",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "RawValue",
+              "printedName": "RawValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:SY",
+          "mangledName": "$sSY"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "APIProtocol",
+      "printedName": "APIProtocol",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "httpMthodType",
+          "printedName": "httpMthodType()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "HTTPMethodType",
+              "printedName": "JNetworking.HTTPMethodType",
+              "usr": "s:11JNetworking14HTTPMethodTypeO"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking11APIProtocolP13httpMthodTypeAA010HTTPMethodE0OyF",
+          "mangledName": "$s11JNetworking11APIProtocolP13httpMthodTypeAA010HTTPMethodE0OyF",
+          "moduleName": "JNetworking",
+          "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIProtocol>",
+          "sugared_genericSig": "<Self where Self : JNetworking.APIProtocol>",
+          "protocolReq": true,
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "apiEndPath",
+          "printedName": "apiEndPath()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking11APIProtocolP10apiEndPathSSyF",
+          "mangledName": "$s11JNetworking11APIProtocolP10apiEndPathSSyF",
+          "moduleName": "JNetworking",
+          "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIProtocol>",
+          "sugared_genericSig": "<Self where Self : JNetworking.APIProtocol>",
+          "protocolReq": true,
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "apiBasePath",
+          "printedName": "apiBasePath()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking11APIProtocolP11apiBasePathSSyF",
+          "mangledName": "$s11JNetworking11APIProtocolP11apiBasePathSSyF",
+          "moduleName": "JNetworking",
+          "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIProtocol>",
+          "sugared_genericSig": "<Self where Self : JNetworking.APIProtocol>",
+          "protocolReq": true,
+          "reqNewWitnessTableEntry": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:11JNetworking11APIProtocolP",
+      "mangledName": "$s11JNetworking11APIProtocolP",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "APIModelType",
+      "printedName": "APIModelType",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "api",
+          "printedName": "api",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "APIProtocol",
+              "printedName": "JNetworking.APIProtocol",
+              "usr": "s:11JNetworking11APIProtocolP"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvp",
+          "mangledName": "$s11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvp",
+          "moduleName": "JNetworking",
+          "protocolReq": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "APIProtocol",
+                  "printedName": "JNetworking.APIProtocol",
+                  "usr": "s:11JNetworking11APIProtocolP"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvg",
+              "mangledName": "$s11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvg",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "APIProtocol",
+                  "printedName": "JNetworking.APIProtocol",
+                  "usr": "s:11JNetworking11APIProtocolP"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvs",
+              "mangledName": "$s11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvs",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvM",
+              "mangledName": "$s11JNetworking12APIModelTypeP3apiAA11APIProtocol_pvM",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "implicit": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "parameters",
+          "printedName": "parameters",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:11JNetworking12APIModelTypeP10parametersSDySSypGSgvp",
+          "mangledName": "$s11JNetworking12APIModelTypeP10parametersSDySSypGSgvp",
+          "moduleName": "JNetworking",
+          "protocolReq": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String : Any]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Dictionary",
+                      "printedName": "[Swift.String : Any]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:SD"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP10parametersSDySSypGSgvg",
+              "mangledName": "$s11JNetworking12APIModelTypeP10parametersSDySSypGSgvg",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String : Any]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Dictionary",
+                      "printedName": "[Swift.String : Any]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:SD"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP10parametersSDySSypGSgvs",
+              "mangledName": "$s11JNetworking12APIModelTypeP10parametersSDySSypGSgvs",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking12APIModelTypeP10parametersSDySSypGSgvM",
+              "mangledName": "$s11JNetworking12APIModelTypeP10parametersSDySSypGSgvM",
+              "moduleName": "JNetworking",
+              "genericSig": "<τ_0_0 where τ_0_0 : JNetworking.APIModelType>",
+              "sugared_genericSig": "<Self where Self : JNetworking.APIModelType>",
+              "protocolReq": true,
+              "implicit": true,
+              "reqNewWitnessTableEntry": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        }
+      ],
+      "declKind": "Protocol",
+      "usr": "s:11JNetworking12APIModelTypeP",
+      "mangledName": "$s11JNetworking12APIModelTypeP",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "APIRequestModel",
+      "printedName": "APIRequestModel",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "api",
+          "printedName": "api",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "APIProtocol",
+              "printedName": "JNetworking.APIProtocol",
+              "usr": "s:11JNetworking11APIProtocolP"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvp",
+          "mangledName": "$s11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvp",
+          "moduleName": "JNetworking",
+          "declAttributes": [
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 0,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "APIProtocol",
+                  "printedName": "JNetworking.APIProtocol",
+                  "usr": "s:11JNetworking11APIProtocolP"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvg",
+              "mangledName": "$s11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvg",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "APIProtocol",
+                  "printedName": "JNetworking.APIProtocol",
+                  "usr": "s:11JNetworking11APIProtocolP"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvs",
+              "mangledName": "$s11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvs",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvM",
+              "mangledName": "$s11JNetworking15APIRequestModelV3apiAA11APIProtocol_pvM",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "parameters",
+          "printedName": "parameters",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:11JNetworking15APIRequestModelV10parametersSDySSypGSgvp",
+          "mangledName": "$s11JNetworking15APIRequestModelV10parametersSDySSypGSgvp",
+          "moduleName": "JNetworking",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage"
+          ],
+          "fixedbinaryorder": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String : Any]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Dictionary",
+                      "printedName": "[Swift.String : Any]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:SD"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV10parametersSDySSypGSgvg",
+              "mangledName": "$s11JNetworking15APIRequestModelV10parametersSDySSypGSgvg",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[Swift.String : Any]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Dictionary",
+                      "printedName": "[Swift.String : Any]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "String",
+                          "printedName": "Swift.String",
+                          "usr": "s:SS"
+                        },
+                        {
+                          "kind": "TypeNominal",
+                          "name": "ProtocolComposition",
+                          "printedName": "Any"
+                        }
+                      ],
+                      "usr": "s:SD"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV10parametersSDySSypGSgvs",
+              "mangledName": "$s11JNetworking15APIRequestModelV10parametersSDySSypGSgvs",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:11JNetworking15APIRequestModelV10parametersSDySSypGSgvM",
+              "mangledName": "$s11JNetworking15APIRequestModelV10parametersSDySSypGSgvM",
+              "moduleName": "JNetworking",
+              "implicit": true,
+              "declAttributes": [
+                "Transparent"
+              ],
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(api:parameters:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "APIRequestModel",
+              "printedName": "JNetworking.APIRequestModel",
+              "usr": "s:11JNetworking15APIRequestModelV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "APIProtocol",
+              "printedName": "JNetworking.APIProtocol",
+              "usr": "s:11JNetworking11APIProtocolP"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[Swift.String : Any]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : Any]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "ProtocolComposition",
+                      "printedName": "Any"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:11JNetworking15APIRequestModelV3api10parametersAcA11APIProtocol_p_SDySSypGSgtcfc",
+          "mangledName": "$s11JNetworking15APIRequestModelV3api10parametersAcA11APIProtocol_p_SDySSypGSgtcfc",
+          "moduleName": "JNetworking",
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:11JNetworking15APIRequestModelV",
+      "mangledName": "$s11JNetworking15APIRequestModelV",
+      "moduleName": "JNetworking",
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "APIModelType",
+          "printedName": "APIModelType",
+          "usr": "s:11JNetworking12APIModelTypeP",
+          "mangledName": "$s11JNetworking12APIModelTypeP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "JNWebserviceConfig",
+      "printedName": "JNWebserviceConfig",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "generateHeader",
+          "printedName": "generateHeader()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking18JNWebserviceConfigV14generateHeaderSDyS2SGyF",
+          "mangledName": "$s11JNetworking18JNWebserviceConfigV14generateHeaderSDyS2SGyF",
+          "moduleName": "JNetworking",
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "JNWebserviceConfig",
+              "printedName": "JNetworking.JNWebserviceConfig",
+              "usr": "s:11JNetworking18JNWebserviceConfigV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:11JNetworking18JNWebserviceConfigVACycfc",
+          "mangledName": "$s11JNetworking18JNWebserviceConfigVACycfc",
+          "moduleName": "JNetworking",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:11JNetworking18JNWebserviceConfigV",
+      "mangledName": "$s11JNetworking18JNWebserviceConfigV",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftOnoneSupport",
+      "printedName": "SwiftOnoneSupport",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "Import",
+      "name": "_Concurrency",
+      "printedName": "_Concurrency",
+      "declKind": "Import",
+      "moduleName": "JNetworking"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "NetworkError",
+      "printedName": "NetworkError",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "incorrectData",
+          "printedName": "incorrectData",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.NetworkError.Type) -> (Foundation.Data) -> JNetworking.NetworkError",
+              "children": [
+                {
+                  "kind": "TypeFunc",
+                  "name": "Function",
+                  "printedName": "(Foundation.Data) -> JNetworking.NetworkError",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NetworkError",
+                      "printedName": "JNetworking.NetworkError",
+                      "usr": "s:11JNetworking12NetworkErrorO"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Data",
+                      "printedName": "Foundation.Data",
+                      "usr": "s:10Foundation4DataV"
+                    }
+                  ]
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.NetworkError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NetworkError",
+                      "printedName": "JNetworking.NetworkError",
+                      "usr": "s:11JNetworking12NetworkErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking12NetworkErrorO13incorrectDatayAC10Foundation0E0VcACmF",
+          "mangledName": "$s11JNetworking12NetworkErrorO13incorrectDatayAC10Foundation0E0VcACmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 0
+        },
+        {
+          "kind": "Var",
+          "name": "incorrectURL",
+          "printedName": "incorrectURL",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.NetworkError.Type) -> JNetworking.NetworkError",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NetworkError",
+                  "printedName": "JNetworking.NetworkError",
+                  "usr": "s:11JNetworking12NetworkErrorO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.NetworkError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NetworkError",
+                      "printedName": "JNetworking.NetworkError",
+                      "usr": "s:11JNetworking12NetworkErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking12NetworkErrorO12incorrectURLyA2CmF",
+          "mangledName": "$s11JNetworking12NetworkErrorO12incorrectURLyA2CmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 1
+        },
+        {
+          "kind": "Var",
+          "name": "unknown",
+          "printedName": "unknown",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(JNetworking.NetworkError.Type) -> JNetworking.NetworkError",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NetworkError",
+                  "printedName": "JNetworking.NetworkError",
+                  "usr": "s:11JNetworking12NetworkErrorO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "JNetworking.NetworkError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "NetworkError",
+                      "printedName": "JNetworking.NetworkError",
+                      "usr": "s:11JNetworking12NetworkErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:11JNetworking12NetworkErrorO7unknownyA2CmF",
+          "mangledName": "$s11JNetworking12NetworkErrorO7unknownyA2CmF",
+          "moduleName": "JNetworking",
+          "fixedbinaryorder": 2
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:11JNetworking12NetworkErrorO",
+      "mangledName": "$s11JNetworking12NetworkErrorO",
+      "moduleName": "JNetworking",
+      "isEnumExhaustive": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Error",
+          "printedName": "Error",
+          "usr": "s:s5ErrorP",
+          "mangledName": "$ss5ErrorP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "JNWebserviceHelper",
+      "printedName": "JNWebserviceHelper",
+      "children": [
+        {
+          "kind": "Function",
+          "name": "requestAPI",
+          "printedName": "requestAPI(apiModel:completion:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Foundation.URLSessionDataTask?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "URLSessionDataTask",
+                  "printedName": "Foundation.URLSessionDataTask",
+                  "usr": "c:objc(cs)NSURLSessionDataTask"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "APIModelType",
+              "printedName": "JNetworking.APIModelType",
+              "usr": "s:11JNetworking12APIModelTypeP"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(Swift.Result<Foundation.Data, Swift.Error>) -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Result",
+                  "printedName": "Swift.Result<Foundation.Data, Swift.Error>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Data",
+                      "printedName": "Foundation.Data",
+                      "usr": "s:10Foundation4DataV"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Error",
+                      "printedName": "Swift.Error",
+                      "usr": "s:s5ErrorP"
+                    }
+                  ],
+                  "usr": "s:s6ResultO"
+                }
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:11JNetworking18JNWebserviceHelperV10requestAPI8apiModel10completionSo20NSURLSessionDataTaskCSgAA12APIModelType_p_ys6ResultOy10Foundation0J0Vs5Error_pGctFZ",
+          "mangledName": "$s11JNetworking18JNWebserviceHelperV10requestAPI8apiModel10completionSo20NSURLSessionDataTaskCSgAA12APIModelType_p_ys6ResultOy10Foundation0J0Vs5Error_pGctFZ",
+          "moduleName": "JNetworking",
+          "static": true,
+          "declAttributes": [
+            "DiscardableResult"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "JNWebserviceHelper",
+              "printedName": "JNetworking.JNWebserviceHelper",
+              "usr": "s:11JNetworking18JNWebserviceHelperV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:11JNetworking18JNWebserviceHelperVACycfc",
+          "mangledName": "$s11JNetworking18JNWebserviceHelperVACycfc",
+          "moduleName": "JNetworking",
+          "implicit": true,
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:11JNetworking18JNWebserviceHelperV",
+      "mangledName": "$s11JNetworking18JNWebserviceHelperV",
+      "moduleName": "JNetworking"
+    }
+  ],
+  "json_format_version": 6
+}

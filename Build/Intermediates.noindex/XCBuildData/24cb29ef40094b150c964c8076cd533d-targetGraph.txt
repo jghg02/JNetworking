@@ -1,0 +1,6 @@
+Target dependency graph (3 targets)
+JNetworking in JNetworking, no dependencies
+JNetworking in JNetworking, depends on:
+JNetworking in JNetworking (explicit)
+JNetworkingTests in JNetworking, depends on:
+JNetworking in JNetworking (explicit)

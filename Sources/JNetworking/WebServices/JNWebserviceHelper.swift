@@ -13,6 +13,7 @@ enum NetworkError: Error {
     case unknown
 }
 
+/// The completion hablder
 public typealias JNWebServiceCompletionBlock = (Result<Data, Error>) -> Void
 
 /// Helper class to prepare request(adding headers & clubbing base URL) & perform API request.

@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "495f2613ab0bb94cae809fe78a8001a50bebce59fb6ba3cf44075abfdb91f7eb"
+build_start_time: [1646160678, 374641895]
+build_end_time: [1646160685, 640634059]
+inputs:
+  "/Users/jhgonzalez/Desktop/MyApp/Me/ios/JNetworking/Sources/JNetworking/Decoder/JNJSONReponseDecoder.swift": [1646155034, 638977050]
+  "/Users/jhgonzalez/Desktop/MyApp/Me/ios/JNetworking/Sources/JNetworking/WebServices/JNWebserviceConfig.swift": [1646156348, 265939235]
+  "/Users/jhgonzalez/Desktop/MyApp/Me/ios/JNetworking/Sources/JNetworking/WebServices/JNWebserviceHelper.swift": [1646155746, 663833141]

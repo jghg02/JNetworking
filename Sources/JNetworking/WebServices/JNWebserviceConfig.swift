@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// HTTPMethodTypes
+/// Supported HTTP methods are declared 
 public enum HTTPMethodType: String {
     case get     = "GET"
     case post    = "POST"

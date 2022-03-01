@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
+options: "e7e1afa74f12531da7c2929fcab28a7bde8c1011c9be3d5fc6b87307e307be20"
+build_start_time: [1646160686, 915131092]
+build_end_time: [1646160695, 197730064]
+inputs:
+  "/Users/jhgonzalez/Desktop/MyApp/Me/ios/JNetworking/Tests/JNetworkingTests/JNetworkingTests.swift": [1646155388, 713472366]
