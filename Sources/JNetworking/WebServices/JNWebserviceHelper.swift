@@ -15,6 +15,47 @@ enum NetworkError: Error {
 
 public typealias JNWebServiceCompletionBlock = (Result<Data, Error>) -> Void
 
+
+public protocol RequestLoader {
+    func requestAPIClient(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask?
+}
+
+
+extension URLSession: RequestLoader {
+    
+    public func requestAPIClient(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
+        let escapedAddress = (apiModel.api.apiBasePath()+apiModel.api.apiEndPath()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
+        var request = URLRequest(url: URL(string: escapedAddress!)!)
+        request.httpMethod = apiModel.api.httpMthodType().rawValue
+        request.allHTTPHeaderFields = JNWebserviceConfig().generateHeader()
+
+        if let params = apiModel.parameters {
+            do {
+                request.httpBody = try JSONSerialization.data(withJSONObject: params as Any, options: .prettyPrinted)
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+
+        let task = dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(.failure(error ?? NetworkError.unknown))
+                return
+            }
+
+            if let httpStatus = response as? HTTPURLResponse,  ![200, 201].contains(httpStatus.statusCode) {
+                completion(.failure(NetworkError.incorrectData(data)))
+            }
+            completion(.success(data))
+
+        }
+        task.resume()
+        return task
+    }
+    
+}
+
+
 /// Helper class to prepare request(adding headers & clubbing base URL) & perform API request.
 public struct JNWebserviceHelper {
     
