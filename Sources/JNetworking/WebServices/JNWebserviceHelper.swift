@@ -15,15 +15,22 @@ enum NetworkError: Error {
 
 public typealias JNWebServiceCompletionBlock = (Result<Data, Error>) -> Void
 
-
+/// Protocol
 public protocol RequestLoader {
     func requestAPIClient(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask?
 }
 
-
+/// Helper class to prepare request(adding headers & clubbing base URL) & perform API request.
 extension URLSession: RequestLoader {
     
-    public func requestAPIClient(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
+    /// Performs a API request which is called by any service request class.
+    /// It also performs an additional task of validating the auth token and refreshing if necessary
+    ///
+    /// - Parameters:
+    ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
+    ///   - completion: Request completion handler.
+    /// - Returns: Returns a URLSessionDataTask instance.
+    @discardableResult public func requestAPIClient(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
         let escapedAddress = (apiModel.api.apiBasePath()+apiModel.api.apiEndPath()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         var request = URLRequest(url: URL(string: escapedAddress!)!)
         request.httpMethod = apiModel.api.httpMthodType().rawValue
@@ -66,6 +73,7 @@ public struct JNWebserviceHelper {
     ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
     ///   - completion: Request completion handler.
     /// - Returns: Returns a URLSessionDataTask instance.
+    @available(*, deprecated, message: "Use JNWebClient to create a request - This method requestAPI will be deprecated soon")
     @discardableResult public static func requestAPI(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
         let escapedAddress = (apiModel.api.apiBasePath()+apiModel.api.apiEndPath()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         var request = URLRequest(url: URL(string: escapedAddress!)!)
