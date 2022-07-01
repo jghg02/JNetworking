@@ -73,7 +73,7 @@ public struct JNWebserviceHelper {
     ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
     ///   - completion: Request completion handler.
     /// - Returns: Returns a URLSessionDataTask instance.
-    @available(*, deprecated, message: "Use JNWebClient to create a request - This method requestAPI will be deprecated soon")
+    @available(*, deprecated, message: "Use JNWebClient to create a request")
     @discardableResult public static func requestAPI(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
         let escapedAddress = (apiModel.api.apiBasePath()+apiModel.api.apiEndPath()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
         var request = URLRequest(url: URL(string: escapedAddress!)!)
