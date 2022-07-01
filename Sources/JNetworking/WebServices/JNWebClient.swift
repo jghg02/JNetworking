@@ -9,7 +9,7 @@ import Foundation
 
 
 /// This is the struct to implement the request
-public struct JNWebClient {
+public struct JNWebClient <T, E> where T: Decodable, E: LocalizedError & Decodable & Equatable {
     
     /// client a session
     private let requestLoader: RequestLoader
@@ -27,9 +27,46 @@ public struct JNWebClient {
     /// - Parameters:
     ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
     ///   - completion: Request completion handler.
-    /// - Returns: Returns a URLSessionDataTask instance.
-    public func request(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
-        return self.requestLoader.requestAPIClient(apiModel: apiModel, completion: completion)
+    public func request(apiModel: APIModelType, completion: @escaping JNWebServiceBlock<T, E>) {
+        
+        self.requestLoader.requestAPIClient(apiModel: apiModel) { data, response, error in
+            if let error = error {
+                completion(.failure(.failedRequest(error)))
+            } else if let response = response as? HTTPURLResponse {
+                handleResponse(response, with: data, completion: completion)
+            } else {
+                completion(.failure(.failedRequest(nil)))
+            }
+        }
+    }
+    
+    private func handleResponse<T, E>(_ response: HTTPURLResponse, with data: Data?, completion: @escaping JNWebServiceBlock<T, E>) {
+        if (200 ..< 300).contains(response.statusCode) {
+            handleSuccess(data, headers: response.allHeaderFields, completion: completion)
+        } else {
+            handleFailure(data, statusCode: response.statusCode, completion: completion)
+        }
+    }
+    
+    private func handleSuccess<T, E>(_ data: Data?, headers: [AnyHashable: Any], completion: @escaping JNWebServiceBlock<T, E>) {
+        if let object: T = parse(data) {
+            completion(.success(JNResponse(headers: headers, value: object)))
+        } else {
+            completion(.failure(.responseTypeMismatch))
+        }
+    }
+    
+    private func handleFailure<T, E>(_ data: Data?, statusCode: Int, completion: @escaping JNWebServiceBlock<T, E>) {
+        if let error: E = parse(data) {
+            completion(.failure(.invalidRequest(error)))
+        } else {
+            completion(.failure(.invalidResponse(statusCode)))
+        }
+    }
+    
+    private func parse<T: Decodable>(_ data: Data?) -> T? {
+        guard let data = data else { return nil }
+        return try? JSONDecoder().decode(T.self, from: data)
     }
     
 }
