@@ -21,15 +21,24 @@ public struct JNWebClient <T, E> where T: Decodable, E: LocalizedError & Decodab
         self.requestLoader = requestLoader
     }
     
+    
+    /// Performs a API request
+    /// - Parameters:
+    ///   - request:All config to use in a request
+    ///   - completion: Completion handler
+    public func request(request: JNRequest, completion: @escaping JNWebServiceBlock<T, E>) {
+        self.request(request: request.asURLRequest, completion: completion)
+    }
+    
     /// Performs a API request which is called by any service request class.
     /// It also performs an additional task of validating the auth token and refreshing if necessary
     ///
     /// - Parameters:
     ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
     ///   - completion: Request completion handler.
-    public func request(apiModel: APIModelType, completion: @escaping JNWebServiceBlock<T, E>) {
+    public func request(request: URLRequest, completion: @escaping JNWebServiceBlock<T, E>) {
         
-        self.requestLoader.requestAPIClient(apiModel: apiModel) { data, response, error in
+        self.requestLoader.requestAPIClient(request: request) { data, response, error in
             if let error = error {
                 completion(.failure(.failedRequest(error)))
             } else if let response = response as? HTTPURLResponse {
