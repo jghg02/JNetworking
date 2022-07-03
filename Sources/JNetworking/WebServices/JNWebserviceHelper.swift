@@ -29,7 +29,7 @@ extension URLSession: RequestLoader {
     public func requestAPIClient(request: URLRequest, completion: @escaping JNWebServiceResult) {
         dataTask(with: request) { data, response, error in
             completion(data, response, error as? URLError)
-        }
+        }.resume()
     }
     
 }
