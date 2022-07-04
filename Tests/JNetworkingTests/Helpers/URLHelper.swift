@@ -16,6 +16,6 @@ extension URLRequest {
     static var testWithExtraProperties = Self(
         url: URL.test,
         cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
-        timeoutInterval: 42.0
+        timeoutInterval: 4.0
     )
 }

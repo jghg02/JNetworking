@@ -23,35 +23,5 @@ enum ApiHelper {
     case getData
 }
 
-extension ApiHelper: APIProtocol {
-
-    func httpMthodType() -> HTTPMethodType {
-        var httpMethodType = HTTPMethodType.get
-        switch self {
-        case .getData:
-            httpMethodType = .get
-        }
-        return httpMethodType
-    }
-
-    func apiEndPath() -> String {
-        var path = ""
-        switch self {
-        case .getData:
-            path += ApiModelHelperConstants.recipes
-        }
-
-        return path
-    }
-
-    func apiBasePath() -> String {
-        switch self {
-        case .getData:
-            return ApiModelHelperConstants.baseURL
-        }
-    }
-
-
-}
 
 
