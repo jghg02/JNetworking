@@ -10,7 +10,7 @@ import Foundation
 struct TestObject: Codable, Equatable {
     let title: String
 
-    init(title: String = "Test Title") {
+    init(title: String = "Test TEst") {
         self.title = title
     }
 }
