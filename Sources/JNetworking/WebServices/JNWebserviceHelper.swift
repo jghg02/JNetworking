@@ -7,54 +7,30 @@
 
 import Foundation
 
-enum NetworkError: Error {
-    case incorrectData(Data)
-    case incorrectURL
-    case unknown
+public typealias JNWebServiceResult = (Data?, URLResponse?, URLError?) -> Void
+public typealias JNWebServiceBlock<T, E> = (Result<JNResponse<T>, JNNetworkError<E>>) -> Void
+    where T: Decodable, E: LocalizedError & Decodable & Equatable
+
+
+/// Protocol
+public protocol RequestLoader {
+    func requestAPIClient(request: URLRequest, completion: @escaping JNWebServiceResult)
 }
 
-public typealias JNWebServiceCompletionBlock = (Result<Data, Error>) -> Void
-
 /// Helper class to prepare request(adding headers & clubbing base URL) & perform API request.
-public struct JNWebserviceHelper {
+extension URLSession: RequestLoader {
     
     /// Performs a API request which is called by any service request class.
     /// It also performs an additional task of validating the auth token and refreshing if necessary
     ///
     /// - Parameters:
-    ///   - apiModel: APIModelType which contains the info about api endpath, header & http method type.
+    ///   - request: URLRequest
     ///   - completion: Request completion handler.
-    /// - Returns: Returns a URLSessionDataTask instance.
-    @discardableResult public static func requestAPI(apiModel: APIModelType, completion: @escaping JNWebServiceCompletionBlock) -> URLSessionDataTask? {
-        let escapedAddress = (apiModel.api.apiBasePath()+apiModel.api.apiEndPath()).addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)
-        var request = URLRequest(url: URL(string: escapedAddress!)!)
-        request.httpMethod = apiModel.api.httpMthodType().rawValue
-        request.allHTTPHeaderFields = JNWebserviceConfig().generateHeader()
-
-        if let params = apiModel.parameters {
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: params as Any, options: .prettyPrinted)
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }
-
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, error == nil else {
-                completion(.failure(error ?? NetworkError.unknown))
-                return
-            }
-
-            if let httpStatus = response as? HTTPURLResponse,  ![200, 201].contains(httpStatus.statusCode) {
-                completion(.failure(NetworkError.incorrectData(data)))
-            }
-            completion(.success(data))
-
-        }
-        
-        task.resume()
-        return task
+    public func requestAPIClient(request: URLRequest, completion: @escaping JNWebServiceResult) {
+        dataTask(with: request) { data, response, error in
+            completion(data, response, error as? URLError)
+        }.resume()
     }
-
+    
 }
 
